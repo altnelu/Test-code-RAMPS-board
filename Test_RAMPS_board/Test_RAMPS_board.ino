@@ -55,6 +55,7 @@
 
 //*******************************
 //redefine
+/*
 #undef TEMP_0_PIN
 #define TEMP_0_PIN          11   // Analog Input
 #undef X_MIN_PIN
@@ -63,7 +64,7 @@
 #define Y_MIN_PIN          2   // Analog Input
 #undef Z_MAX_PIN
 #define Z_MAX_PIN          18   // Analog Input
-
+*/
  
  
 //local variable. Not modify.
@@ -95,10 +96,12 @@ void setup() {
       //
       //custom set pin for power endstop
       //
+ /*
       pinMode(15, OUTPUT);
       digitalWrite(15, LOW); 
       pinMode(14, OUTPUT);
       digitalWrite(14, HIGH); 
+ */
       //end custom
       
     digitalWrite(PS_ON_PIN    , LOW);
@@ -139,7 +142,7 @@ void loop () {
       stringComplete = false;
   }
   misc();
- // temperatura();
+  temperatura();
   endstop();
 }
 
